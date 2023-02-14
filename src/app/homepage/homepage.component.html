@@ -1,0 +1,137 @@
+<nav class="navbar navbar-expand-lg" style="padding-left:200px ; background-color: rgb(245, 163, 47);">
+    <a style="color: white;font-weight: bold;" class="navbar-brand" href="#">Accueil</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div style=" background-color: rgb(245, 163, 47);" class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a style="color: white;font-weight: bold;" class="nav-link" href="#">a propos</a>
+            </li>
+            <li class="nav-item">
+                <a style="color: white; font-weight: bold;" [routerLink]="['/gestionemploye']" class="nav-link"
+                    href="#">Liste
+                    des employes</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<section style="background-color: antiquewhite;" id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+                data-aos="fade-up" data-aos-delay="200">
+                <h1>Gestion des employes</h1>
+                <h2>tous les employes de l'entreprise</h2>
+
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+            </div>
+        </div>
+    </div>
+
+</section><!-- End Hero -->
+
+<div class="container mt-4" style="background-color: rgb(255, 85, 0);">
+
+    <div>
+        <h1>enregistrer vos employés</h1>
+
+        <form>
+            <div class="form-group">
+                <label style="padding: 10px;">Name</label>
+                <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control"
+                    id="name" placeholder="Enter Name">
+
+            </div>
+
+            <div class="form-group">
+                <label style="padding: 10px;">address</label>
+                <input type="text" [(ngModel)]="address" [ngModelOptions]="{standalone: true}" class="form-control"
+                    id="address" placeholder="Enter address">
+
+            </div>
+
+            <div class="form-group">
+                <label style="padding: 10px;">Mobile</label>
+                <input type="text" [(ngModel)]="mobile" [ngModelOptions]="{standalone: true}" class="form-control"
+                    id="mobile" placeholder="Enter Mobile">
+
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-4" (click)="save()">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div class="mt-4">
+    <!-- Footer -->
+    <footer style="background-color: rgb(92, 64, 3);" class=" text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Social media -->
+
+            <!-- Section: Social media -->
+
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Sign up for our newsletter</strong>
+                            </p>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="form5Example21" class="form-control" />
+                                <label class="form-label" for="form5Example21">Email address</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+
+            <!-- Section: Text -->
+            <!-- <section class="mb-4">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                    repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                    eum harum corrupti dicta, aliquam sequi voluptate quas.
+                </p>
+            </section> -->
+            <!-- Section: Text -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" href="#">getionemploye.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</div>

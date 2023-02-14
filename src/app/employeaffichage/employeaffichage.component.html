@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg" style="padding-left:200px ; background-color: rgb(245, 163, 47);">
+    <a style="color: white;font-weight: bold;" class="navbar-brand" href="#">Accueil</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div style=" background-color: rgb(245, 163, 47);" class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a style="color: white;font-weight: bold;" class="nav-link" href="#">a propos</a>
+            </li>
+            <li class="nav-item">
+                <a style="color: white; font-weight: bold;" [routerLink]="['/gestionemploye']" class="nav-link"
+                    href="#">Liste
+                    des employes</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<section style="background-color: antiquewhite;" id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+                data-aos="fade-up" data-aos-delay="200">
+                <h1>Gestion des employes</h1>
+                <h2>tous les employes de l'entreprise</h2>
+
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+            </div>
+        </div>
+    </div>
+
+</section><!-- End Hero -->
+<div class="container mt-4">
+
+    <h1>Employee Table</h1>
+
+
+
+
+    <table class="table">
+        <thead>
+            <h1 *ngIf="!isResultLoaded">Loading.................</h1>
+
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Option</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let EmployeeItem of EmployeeArray">
+
+                <th scope="row">{{EmployeeItem.id }}</th>
+                <td>{{EmployeeItem.name | uppercase}}</td>
+                <td>{{EmployeeItem.address }}</td>
+                <td>{{EmployeeItem.mobile }}</td>
+
+                <td>
+                    <button type="button" class="btn btn-success" (click)="setUpdate(EmployeeItem)">Edit</button>
+
+                    <button type="button" class="btn btn-danger" (click)="setDelete(EmployeeItem)">Delete</button>
+
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+</div>
